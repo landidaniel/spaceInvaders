@@ -1,0 +1,106 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: black;
+}
+
+p {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+li {
+    font-size: 18px;
+}
+
+p, ul {
+    margin: 0;
+}
+
+#main-play-area {
+  background-color: black;
+  background-image: url(img/space3.png);
+  background-repeat: repeat-x;
+  animation: slideright 75000s infinite linear;
+  -webkit-animation: slideright 75000s infinite linear;
+  height: 600px;
+  width: 600px;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 200000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.game-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.game-instructions, .start-button {
+    color: white;
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.game-instructions {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.start-button {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    opacity: 1;
+}
+
+.player-shooter {
+    position: relative;
+    height: 60px;
+    width: 70px;
+    left: 20px;
+    top: 250px
+}
+
+.laser {
+    position: relative;
+    width: 40px;
+    height: 30px;
+}
+
+.alien {
+    height: 60px;
+    width: 70px;
+    position: relative;
+}
+
+.alien-transition {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.dead-alien {
+    height: 60px;
+    width: 70px;
+    position: relative;
+    opacity: 0;
+}
